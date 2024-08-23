@@ -22,6 +22,6 @@ public class Weapon : MonoBehaviour
             newBullet.transform.rotation = spawnPoint.rotation;
             newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 100.0f);
         }
-        
+      
     }
 }
