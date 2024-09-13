@@ -18,11 +18,13 @@ public class BulletCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        PoolManager.Instance.ReturnObjectToPool(this.gameObject);
         
         if(collision.gameObject.tag == "Wall")
                 {
-            Destroy(collision.gameObject);
-            }
+            //Destroy(collision.gameObject);
+            PoolManager.Instance.ReturnObjectToPool(this.gameObject);
+        }
     }
 }
