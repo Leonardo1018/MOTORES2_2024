@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeColorAction : MonoBehaviour
+public class ChangeColorAction : AIAction
 {
-    // Start is called before the first frame update
-    void Start()
+    public Color alertColor;
+    private Color _originalColor;
+    private MeshRenderer _meshRenderer;
+
+    public override void PerformAction() { }
+
+    protected override void Initialization() 
+    { 
+    base.Initialization();
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
+    }
+    public override void OnEnterState()
     {
-        
+        base.OnEnterState();
+        _originalColor = _meshRenderer.material.color;
+        _meshRenderer.material.color = alertColor;
     }
 
     // Update is called once per frame
-    void Update()
+    public override void OnExitState()
     {
-        
+        base.OnExitState();
+        _meshRenderer.material.color= _originalColor;
     }
 }
