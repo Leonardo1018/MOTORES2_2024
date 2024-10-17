@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class OnTriggerEnterDecision : AIDecision
 {
     private bool hasPlayerEnter;
+    private float timer = 0;
 
     public override bool Decide()
     {
@@ -15,14 +17,18 @@ public class OnTriggerEnterDecision : AIDecision
     {
         if(other.gameObject.tag == "Player")
         {
+            _brain.Target = other.transform;
             hasPlayerEnter = true;
         }
+       
+
     }
 
-    public override void OnExitState()
+    public override void OnEnterState()
     {
-        base.OnExitState();
+        base.OnEnterState();
         hasPlayerEnter = false;
+       
     }
 
 }
