@@ -6,11 +6,18 @@ using UnityEngine.Rendering;
 public class OnTriggerEnterDecision : AIDecision
 {
     private bool hasPlayerEnter;
-    private float timer = 0;
+    
+
+    public override void Initialization()
+    {
+        base.Initialization();
+        hasPlayerEnter = false;
+    }
+
 
     public override bool Decide()
     {
-        throw new System.NotImplementedException();
+        return hasPlayerEnter;
     }
 
     private void OnTriggerEnter(Collider other)

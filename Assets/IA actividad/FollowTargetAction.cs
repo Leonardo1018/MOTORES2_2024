@@ -12,7 +12,14 @@ public class FollowTargetAction : AIAction
         {
             float step = speed * Time.deltaTime; //calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, _brain.Target.position, step);
+            transform.LookAt(_brain.Target.position);
         }
+    }
+
+    public override void OnEnterState()
+    {
+        base.OnEnterState();
+        GetComponentInChildren<Animator>().SetBool("IsFollowing", true);
     }
 
 }
