@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: d5c19cbf14e4ea0478eee31be32912aa
+guid: eeef3330cced7614c8e7725144aa4dfb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body_MAT
-    second: {fileID: 2100000, guid: c232d7fd5ee47124e92b194d5ff4f5e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Brows_MAT
-    second: {fileID: 2100000, guid: 3dbcadc8af1eb764499a272f5210076c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eyes_MAT
-    second: {fileID: 2100000, guid: b196f5d93aa46e74b8b325f296c58f32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Reflectors
-    second: {fileID: 2100000, guid: a735f862aac117a449dfcd84c8e13dc1, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: MocapSuit02_diffuse
-    second: {fileID: 2800000, guid: 4073802d2ff254541b4294575d1303cc, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -102,8 +77,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - eeef3330cced7614c8e7725144aa4dfb
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
